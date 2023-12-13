@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life+</title>
+    <link rel="icon" type="imagem/png" href="IMAGENS/logo.png"/>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&family=Poppins:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+
+    <style src="style.css"></style>
+
+</head>
+<body>
+
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <header>
+        <div class="header-container">
+            <div class="logo"><a href="/"><img src="IMAGENS/logo.png" alt="LOGO"></a></div>
+            <div class="container-nav">
+                <div class="navegacao">
+                    <nav>
+                        <ul class="nav-list">
+                            <li><a href="/">Life+</a></li>
+                            <li><a href="#calculeSeuImc">IMC</a></li>
+                            <li><a href="#refeicoes">Refeições</a></li>
+                            <li><a href="sobre.html">Sobre</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="navegacao">
+                    <nav>
+                        <ul class="nav-list">
+                            <li><a href="/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAaxJREFUSEvV1E9oz3Ecx/HHj3aSPymJ21xdMFcHLeTC1BJKrVFLkWTIDptStPJ3q0WRlGgHNRdRcsBNw2o3FycHM0Uc7GDrrc+vvvu17+/71e+3g8/p+67v5/18v9+f9+tVscinssj55QHWoBdt2JSKeI+3uIavZQtbCHAYw1iZk+QbuvGkDKQWcAJD6eJjjOBlittxHB0pPoRHRZAsYAM+Ykkaz9WcywO4gF9oxVQ9SBYQ1R7DKA4UVPYMu9CPi2UBn7EuPepEAWAnnmMcW8sCZtCCpfhTAFiNafyoswx/U2RH9BPLsBzxXe+swHd8wdqyHUxiI7bhTQFge9quF9hRFnAJ5zGGfQWAmH+8Q2jmQVnAenxK73AGV3IuDuIsQtlb/kUH8W8X7mWEdhOvU7wXPdid4utJL3UXYiGr2I/bWJVTXWzOrdRFvNs5PM3rJM/sYjNOJ7PbjN94h1e4m8wujK+qgfCuk5itBTVi13tqDO8GTjUTELke4mAm6WX0ZSGNdBB5QvkB6cwkjREercaNAqp57uBICuZ10SxAWPx9fMA8m28WIFdv/z9gDtBmShkOcYCMAAAAAElFTkSuQmCC"/></a></li>
+                            <li><a href="/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjdJREFUSEu11dmrTmEUBvDfMacMkTlEhDIryZThQobEjSJKhkjccCH+AG5QoiSkSDJdSOTGlKFEkcxCxsxKkplWvUef49t7f+G8d3u31nretZ5nPW+VWj5VtVxfJQCdMB0T0C9d6BKOYDce510yD6ApdmJyToEf2Is5+FAuLgugMc6jNz5hM9bjXirSFUsxHw1S7Ah8qQmSBbADs/AI43Ajo4u+OIp2WIdllQD0wRV8xWDEvNtiK4akAmcxDy8xEqfwGV3wtBSkXAcbsBgbsSQVrwYpzY3u+uMNdmEGVmJ1EcAddEvzv5aInomDWJGS12J84mYhRuM4TqeOfmGU6yBIDeLq4jueoD3a4EUJyXfxEJ3RAq9TNy2LOniL5miC90nnHdCxRPOxGw/Sd/yP2HeI3ADL7eAiBqEHbmM7ZqcRLUcjrEqLty2R3QvXcSEJIxdgS0oKgoPoVriK1jUkGBscJMdoQp5rsAmLijoYg2O4jAEpODiolmnwcgYL8Bx1cBPdMQznigCC+PuJvClpNHl2EwoLS7mFnpUsWsRMwx48QyzeqwyEID/GF6KYhMOVAkTcCYxKWzoW32okN0zjGIhDWaaY56ZhD7FoIbtQSxhbuGecetiHGGHsQpAdEv3jFL0HQ3ES9REGODfJNN6BGElYdBAbgih7igAiaSr2J7XEIxPvxPBk4xOT4jJFUAlAJAcHB9AsVQry4yGKxco9lQJEkdjWUNbHNPvfbPlfRlR0yf/WwV8B/QQWDHYZj3ZwRAAAAABJRU5ErkJggg=="/></a></li>
+                            <li><a href="/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZJJREFUSEu11L9L1WEUx/GXNAdKklHY0mCjU3+A2C+l0aSpv0AIDXSS2lSKGtpbU0eLRLPGVjdxaDH6JUahjYlx4DEu3+5zny/X7lmfcz7v8+s5XTpsXR3WVxdwCw9wKSX0AbN4VUqwDmAacxmh+3jcClICXMcqviJAa0nsGuZxDsPYyEFKgPUkMI6lishtLOI1RtoF/EA3TuNXReQM9vAZF9oFfMNZ9OJ7BhA+0aqmVmpR9Pwqoh3LmRbFjG62C2gccmxMzORUgi6g76RDjsQmEWIh3GiHCOjTk6zpcewAphDr+Rtv0/5v/4+PVtJo+d5qyLGekfUVDKZtahTbxSbep2oOmpFygNiK52mIdSqIv3AXb6rOzQCjeJkcV/AQcdx+VoKjwjh+8R4xYZFYrO1fqwJ6sJUyj1szUyd9PErt/ILL2D+OqwLu4QneYaimeLiFTnzKOHwTeJYDxEEbK32eDPhGOnwvcCcH2EE/olXVnpcKOo9P+IiLOcBReijdqBzsn/h2hUrVZLeodmBdx45X8Afl0EcZyvkojQAAAABJRU5ErkJggg=="/></a></li>
+                            <li><button class="botao"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASlJREFUSEvNlDEvBFEURs+JaLQS0YmaH7CVSqPQKbZRCxqV+At6ZAuVRrbQKTQKlegp1BqJRqOSuPKSXZnFzLw1RtxminvfPfeb790nLYct9+fvABERAzUvwLG68xvqPhQUAMO+y+plU8iXXxQRu8A+cK6utgGYBh6BCWBOfWgC+dbkiDgB1hs07qvddL4M0AGuGwDu1MVSQEpExC2w8EPInpp8LN+DiNgAej8AvAGz6lMdYApIRek7TlyoK8MDlZscEQfA9jjdga7azwUkD5IXufEMzKivWYCB2VfAUiahp24Wa2sfu4hI9/k0E9BRb8YFTAL3wHwN5Exd+1xTqyBz8tKyLEBEHAJbwJE6cquqcpV7UByp+JSrI0NV5cYBtKugiQ9ZHvxrwDuPRWUZ2KtgpwAAAABJRU5ErkJggg=="/>Carrinho</button></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="section1-main">
+            <div class="title-imc"><h1>Por que calcular o meu IMC?</h1></div>
+            <div class="texto">
+                <p>Você já ouviu falar sobre o IMC? É uma ferramenta simples para avaliar sua saúde. Vamos descobrir por que você deveria se importar com isso:
+
+                <br><br> <b>1. Saúde em foco:</b> O IMC ajuda a saber se seu peso está saudável para sua altura, evitando problemas como diabetes e doenças cardíacas.
+                
+                <br><br> <b>2. Metas inteligentes:</b> Se quiser perder peso ou ganhar músculos, o IMC pode ser seu aliado para definir metas realistas e medir seu progresso.
+                
+                <br><br> <b>3. Ação preventiva:</b> Monitorar seu IMC ajuda a prevenir problemas de saúde antes que se tornem sérios.
+                
+                <br><br> <b>4. Autoconhecimento:</b> É uma parte importante para tomar decisões informadas sobre dieta, estilo de vida e fitness.
+                
+                <br><br> Então, por que esperar? Calcule seu <b>IMC</b> hoje e <b>comece sua jornada para uma vida mais saudável!</b></p>
+            </div>
+        </section>
+       
+        <div class="title-imc" id="calculeSeuImc">
+            <h1>Calcule o seu IMC</h1>
+        </div>
+
+        <section class="container-calculos">
+
+            <section class="calc-imc">
+
+                <div class="container-calc-imc">
+                    <ul>
+                        <li>
+                            <p>Peso</p>
+                            <input id="numero1" type="text" placeholder="kg">
+                        </li>
+                        <li>
+                            <p>Altura</p>
+                            <input id="numero2" type="text" placeholder="cm">
+                        </li>
+                        </li>
+                        <li>
+                            <p>Idade</p>
+                            <input id="numero3" type="text" placeholder="anos">
+                        </li>
+                        <li>
+                            <p style="color: white;">.</p>
+                            <button class="botao" id="calcularBsal" onclick="calcularImc()">Calcular</button>
+                        </li>
+                    </ul>
+                    <div class="imc-result">
+                        <span style="font-size: 30px;">IMC:</span>
+                        <p id="resultado" type="text"></p>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="calc-objetivo">
+                <div class="objetivo">
+                    <p style="text-align: center; font-size: 30px; text-align: center; margin-bottom: 10px;">OBJETIVO</p>
+                    <form class="escolhas-objetivo">
+                        <button class="botau" id="manter" type="button" value="Manter" onclick="executarAcao('manter')">
+                        Manter</button>
+                        <button class="botau" id="engordar" type="button" value="Engordar" onclick="executarAcao('engordar')">
+                        Engordar</button>
+                        <button class="botau" id="emagrecer" type="button" value="Emagrecer" onclick="executarAcao('emagrecer')">
+                        Emagrecer</button>
+                    </form>
+                </div>
+            </section>  
+
+            <section class="boyOrGirl">
+                <div>   
+                    <p style="text-align: center; font-size: 30px; text-align: center; margin-bottom: 10px;">Sexo</p>
+                    <form class="escolhas-genero">
+                        <button class="bota" id="homem" type="button">Homem</button>
+                        <button class="bota" id="mulher" type="button">Mulher</button>
+                    </form>
+                </div>
+            </section>
+            
+            <section class="contFA">
+              
+                <p style="text-align: center; font-size: 30px; text-align: center; margin-bottom: 10px;">Fator de Atividade</p>
+                
+                <select id="atividadeDiaria">
+	
+                    <option value="1.55">Trabalho com pouco esforço físico</option>
+                    <option value="1.84">Trabalho com esforço físico moderado</option>
+                    <option value="1.95">Trabalho com esforço físico intenso</option>
+
+                </select>
+
+                <p id="pesIdeal" type="text"></p>
+
+            </section>
+
+    </main>
+
+            
+    <section class="containerCatalogo">
+        <p id="refeicoes" style="text-align: center; font-size: 70px; text-align: center; margin-bottom: 10px;">REFEIÇÕES</p>
+        
+        <div class="texto">
+        
+            <p>Em média, você deve consumir cerca de <b>35%</b> de proteínas <b>50%</b> de carboidratos e <b>15%</b> de gorduras para um melhor equilíbrio de sua alimentação. <br><br>
+            Aqui está algumas sugestões de alimentação para o seu <b> café da manhã </b>,<b> almoço </b> e <b> janta: </b></p>
+        
+        </div>
+
+            <p style="text-align: center; font-size: 50px; text-align: center; margin:50px 0px 50px 0px;">Café da Manhã</p>
+            
+            <div class="catalogo">
+                <div class="elemento">
+                    <div class="imagem">
+                        <img src="IMAGENS/panquecaAmericana.jpeg" alt="Panqueca Americana">
+                    </div>
+                    <div class="contDescricao">
+                        <div class="descricao1">
+                            <p>Panqueca com mel</p>
+                        </div>
+                        <div class="descricao2">
+                            <p>
+                                1 colher de chá de sal
+                                1 xícara de farinha de trigo,
+                                1 xícara de leite
+                                , 1 ovo inteiro
+                                , 1 colher de manteiga
+                            </p>
+                        </div>
+                    </div>
+                    <div class="botao-catalogo">
+                        <button class="botao"> Comprar </button>
+                    </div>
+                    </div>
+                <div class="elemento">
+                    <div class="imagem">
+                        <img src="IMAGENS/tapioca.jpeg" alt="Tapioca">
+                    </div>
+                    <div class="contDescricao">
+                        <div class="descricao1">
+                            <p>Tapioca</p>
+                        </div>
+                        <div class="descricao2">
+                            <p>1 kg de tapioca
+                                1 xícara de coco ralado, Sal a gosto
+                                Água, Recheio a gosto (queijo, presunto, carne, camarão, etc)</p>
+                        </div>
+                    </div>
+                    <div class="botao-catalogo">
+                        <button class="botao"> Comprar </button>
+                    </div>
+                </div>
+                <div class="elemento">
+                    <div class="imagem">
+                        <img src="IMAGENS/download.jpeg" alt="Omelete">
+                    </div>
+                    <div class="contDescricao">
+                        <div class="descricao1">
+                            <p>Omelete</p>
+                        </div>
+                        <div class="descricao2">
+                            <p>ovo 2 ovos, sal 1 pitada de sal, presunto 1 fatia de presunto, queijo 2 fatias de queijo</p>
+                        </div>
+                    </div>
+                    <div class="botao-catalogo">
+                        <button class="botao"> Comprar </button>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 50px; text-align: center; margin:50px 0px 50px 0px;">Almoço</p>
+            
+            <div class="catalogo">
+                <div class="elemento">
+                    <div class="imagem">
+                        <img src="IMAGENS/almoco1.jpeg" alt="almoco1">
+                    </div>
+                    <div class="contDescricao">
+                        <div class="descricao1">
+                            <p>Almoço tradicional</p>
+                        </div>
+                        <div class="descricao2">
+                            <p>2 proteínas, arroz, feijão, macarrão, salada</p>
+                        </div>
+                    </div>
+                    <div class="botao-catalogo">
+                        <button class="botao"> Comprar </button>
+                    </div>
+                </div>
+                <div class="elemento">
+                    <div class="imagem">
+                        <img src="IMAGENS/carneMoidaComAbobora.jpeg" alt="almocoFit">
+                    </div>
+                    <div class="contDescricao">
+                        <div class="descricao1">
+                            <p>Almoço fit</p>
+                        </div>
+                        <div class="descricao2">
+                            <p>Carne moída com abóbora</p>
+                        </div>
+                    </div>
+                    <div class="botao-catalogo">
+                        <button class="botao"> Comprar </button>
+                    </div>
+
+                </div>
+                <div class="elemento">
+                    <div class="imagem">
+                        <img src="IMAGENS/arrozComFrango.jpeg" alt="almocoBalanceado">
+                    </div>
+                    <div class="contDescricao">
+                        <div class="descricao1">
+                            <p>Almoço balanceado</p>
+                        </div>
+                        <div class="descricao2">
+                            <p>Arroz temperado com frango</p>
+                        </div>
+                    </div>
+                    <div class="botao-catalogo">
+                        <button class="botao"> Comprar </button>
+                    </div>
+                </div>
+            </div>
+            
+            <p style="text-align: center; font-size: 50px; text-align: center; margin:50px 0px 50px 0px;">Janta</p>
+            
+            <div class="catalogo">
+
+                <div class="elemento">
+                    <div class="imagem">
+                        <img src="IMAGENS/crepiocaQueijo.jpeg" alt="JantaCrepioca">
+                    </div>
+                    <div class="contDescricao">
+                        <div class="descricao1">
+                            <p>Crepioca</p>
+                        </div>
+                        <div class="descricao2">
+                            <p>Ovos e queijo + frango</p>
+                        </div>
+                    </div>
+                    <div class="botao-catalogo">
+                        <button class="botao"> Comprar </button>
+                    </div>
+                </div>
+
+                <div class="elemento">
+                    <div class="imagem">
+                        <img src="IMAGENS/omeleteCenouraErvilhaMilho.jpeg" alt="OmeleteCenouraErvilhaMilho">
+                    </div>
+                    <div class="contDescricao">
+                        <div class="descricao1">
+                            <p>Omelete com cenoura</p>
+                        </div>
+                        <div class="descricao2">
+                            <p>Ovos, ervilha, cenoura e milho</p>
+                        </div>
+                    </div>
+                    <div class="botao-catalogo">
+                        <button class="botao"> Comprar </button>
+                    </div>
+                </div>
+
+                <div class="elemento">
+                    <div class="imagem">
+                        <img src="IMAGENS/sanduicheFrango.jpeg" alt="jantaSanduicheFrango">
+                    </div>
+                    <div class="contDescricao">
+                        <div class="descricao1">
+                            <p>Sanduíche de Frango</p>
+                        </div>
+                        <div class="descricao2">
+                            <p>Pão, frango, salada</p>
+                        </div>
+                    </div>
+                    <div class="botao-catalogo">
+                        <button class="botao"> Comprar </button>
+                    </div>
+                </div>
+                
+               
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <div class="img-l">
+            <div class="div-footer">
+                <a href="/"><img src="IMAGENS/logo.png" alt="LOGO"></a>
+            </div>
+            <div class="div-footer">
+                <h2 style="margin-bottom: 10px;">Venha conhecer <br> </h2>
+                <a href="/" class="link">SOBRE A LIFE+ <br> </a>
+                <a href="/" class="link">NA MÍDIA <br> </a>
+                <a href="/" class="link">PARTICIPANTES <br> </a>
+                <a href="/" class="link">DESENVOLVEDOR <br> </a>
+            </div>
+                
+            <div class="div-footer">
+                <h2 style="margin-bottom: 10px;">Fale conosco <br> </h2>
+                <a href="/" class="link">DÚVIDAS FREQUENTES <br>   </a>
+                <a href="/" class="link">PRECISA DE AJUDA <br> </a>
+                <a href="/" class="link">TERMOS DE USO <br> </a>
+                <a href="/" class="link">POLÍTICA DE PRIVACIDADE <br>  </a>
+            </div>
+        </div>
+            
+        <div class="img">
+            <h5>Formas de Pagamento</h5>
+            <img src="IMAGENS/fdp.png" alt="Formas de Pagamento">
+        </div>
+    </footer>
+
+    <script src="js.js"></script>
+</body>
+</html>
