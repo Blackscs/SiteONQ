@@ -1,0 +1,282 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind Madurai', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    color: black;
+    font-weight: 600;
+}
+
+body {
+    width: 100vw;
+}
+
+header {
+    padding: 0px 20px 0px 20px;
+    height: 5rem;
+    width: 100vw;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.logo > a > img {
+    width: 2.5em;
+    align-items: center;
+}
+
+.container-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.navegacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+}
+
+.nav-list > li{
+    margin-left: 55px;
+}
+
+.botao {
+    width: 110px;
+    display: flex;
+    border: none;
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botao:hover {
+    cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+}
+
+.title, .sub-title {
+    text-align: center;
+}
+
+.title {
+    padding: 3% 10% 0% 10%;
+    font-weight: 800;
+    font-size: 20px;
+    color: white;
+}
+
+.sub-title {
+    padding: 1% 10% 0% 10%;
+    color: white;
+}
+
+.color-decoration {
+    background-color: rgb(0, 0, 0);
+    position: absolute;
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.container-img {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    padding: 3% 20% 0% 20%; 
+}
+
+.container-img img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.content {
+    padding: 4% 10% 0% 10%;
+    text-align: center;
+}
+
+.text {
+    display: flex;
+    padding: 0% 20% 0% 20%;
+    font-size: 14px;
+    text-align: justify;
+    justify-content: center;
+}
+
+.title-content {
+    display: flex;
+    padding: 5% 13% 2% 13%;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    justify-content: center;
+}
+
+.infos-add {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 100px;
+    color: white;
+    align-items: center;
+}
+
+.title-infos-add {
+    font-weight: 900;
+}
+
+.img-infos-add {
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;  
+}
+
+.img-infos-add img {
+    width: 2rem;
+}
+
+.txt-infos-add {
+    height: 90px;
+    margin-top: 15px;
+    font-size: 60%;
+    padding: 0px 30px 0px 30px;
+    text-align: justify;
+}
+
+i {
+    font-size: 10px;
+    color: white;
+}
+
+.elemento {
+    max-width: 200px;
+    min-width: 200px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    padding: 15px;
+    border-radius: 20px;
+    margin: 3%;
+}
+
+i {
+    color: black;
+}
+
+footer { 
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    width: 100%;
+    margin-top: 100px;
+    padding: 30px 0px 30px;
+}
+
+footer a { 
+    color: white;
+}
+
+.img-l {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    
+}
+
+.img { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    padding: 10%;
+}
+
+.img img{ 
+    width: 100%;
+}
+
+a{
+    display: inline;
+    transition: 0.1s color ease-in-out;
+}
+
+.link:hover {
+    color: rgb(216, 0, 216);
+    border-bottom: 1px solid rgb(216, 0, 216);
+}
+
+.div-footer img {
+    width: 80px;
+}
+
+.div-footer {
+    flex: 1;
+    text-align: center; 
+    justify-content: center;
+}
+
+.div-footer a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 658px) {
+
+    .infos-add {
+        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .elemento {
+        margin-top: 50px;
+    }
+
+}

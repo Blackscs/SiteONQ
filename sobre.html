@@ -1,0 +1,169 @@
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+        <link rel="icon" type="imagem/png" href="IMAGENS/logo.png"/>
+
+        <title>Sobre a Liv UP</title>
+
+        <link rel="stylesheet" href="index.css">
+
+    </head>
+    <body>
+        
+        <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+        <header>
+                <div class="logo"><a href="/"><img src="IMAGENS/logo.png" alt="LOGO"></a></div>
+                <div class="container-nav">
+                    <nav>
+                        <ul class="nav-list">
+                            <li><a href="/">Life+</a></li>
+                            <li><a href="#calculeSeuImc">IMC</a></li>
+                            <li><a href="#refeicoes">Refeições</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                    <nav    >
+                        <ul class="nav-list">
+                            <li><a href="/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAaxJREFUSEvV1E9oz3Ecx/HHj3aSPymJ21xdMFcHLeTC1BJKrVFLkWTIDptStPJ3q0WRlGgHNRdRcsBNw2o3FycHM0Uc7GDrrc+vvvu17+/71e+3g8/p+67v5/18v9+f9+tVscinssj55QHWoBdt2JSKeI+3uIavZQtbCHAYw1iZk+QbuvGkDKQWcAJD6eJjjOBlittxHB0pPoRHRZAsYAM+Ykkaz9WcywO4gF9oxVQ9SBYQ1R7DKA4UVPYMu9CPi2UBn7EuPepEAWAnnmMcW8sCZtCCpfhTAFiNafyoswx/U2RH9BPLsBzxXe+swHd8wdqyHUxiI7bhTQFge9quF9hRFnAJ5zGGfQWAmH+8Q2jmQVnAenxK73AGV3IuDuIsQtlb/kUH8W8X7mWEdhOvU7wXPdid4utJL3UXYiGr2I/bWJVTXWzOrdRFvNs5PM3rJM/sYjNOJ7PbjN94h1e4m8wujK+qgfCuk5itBTVi13tqDO8GTjUTELke4mAm6WX0ZSGNdBB5QvkB6cwkjREercaNAqp57uBICuZ10SxAWPx9fMA8m28WIFdv/z9gDtBmShkOcYCMAAAAAElFTkSuQmCC"/></a></li>
+                            <li><a href="/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjdJREFUSEu11dmrTmEUBvDfMacMkTlEhDIryZThQobEjSJKhkjccCH+AG5QoiSkSDJdSOTGlKFEkcxCxsxKkplWvUef49t7f+G8d3u31nretZ5nPW+VWj5VtVxfJQCdMB0T0C9d6BKOYDce510yD6ApdmJyToEf2Is5+FAuLgugMc6jNz5hM9bjXirSFUsxHw1S7Ah8qQmSBbADs/AI43Ajo4u+OIp2WIdllQD0wRV8xWDEvNtiK4akAmcxDy8xEqfwGV3wtBSkXAcbsBgbsSQVrwYpzY3u+uMNdmEGVmJ1EcAddEvzv5aInomDWJGS12J84mYhRuM4TqeOfmGU6yBIDeLq4jueoD3a4EUJyXfxEJ3RAq9TNy2LOniL5miC90nnHdCxRPOxGw/Sd/yP2HeI3ADL7eAiBqEHbmM7ZqcRLUcjrEqLty2R3QvXcSEJIxdgS0oKgoPoVriK1jUkGBscJMdoQp5rsAmLijoYg2O4jAEpODiolmnwcgYL8Bx1cBPdMQznigCC+PuJvClpNHl2EwoLS7mFnpUsWsRMwx48QyzeqwyEID/GF6KYhMOVAkTcCYxKWzoW32okN0zjGIhDWaaY56ZhD7FoIbtQSxhbuGecetiHGGHsQpAdEv3jFL0HQ3ES9REGODfJNN6BGElYdBAbgih7igAiaSr2J7XEIxPvxPBk4xOT4jJFUAlAJAcHB9AsVQry4yGKxco9lQJEkdjWUNbHNPvfbPlfRlR0yf/WwV8B/QQWDHYZj3ZwRAAAAABJRU5ErkJggg=="/></a></li>
+                            <li><a href="/"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAZJJREFUSEu11L9L1WEUx/GXNAdKklHY0mCjU3+A2C+l0aSpv0AIDXSS2lSKGtpbU0eLRLPGVjdxaDH6JUahjYlx4DEu3+5zny/X7lmfcz7v8+s5XTpsXR3WVxdwCw9wKSX0AbN4VUqwDmAacxmh+3jcClICXMcqviJAa0nsGuZxDsPYyEFKgPUkMI6lishtLOI1RtoF/EA3TuNXReQM9vAZF9oFfMNZ9OJ7BhA+0aqmVmpR9Pwqoh3LmRbFjG62C2gccmxMzORUgi6g76RDjsQmEWIh3GiHCOjTk6zpcewAphDr+Rtv0/5v/4+PVtJo+d5qyLGekfUVDKZtahTbxSbep2oOmpFygNiK52mIdSqIv3AXb6rOzQCjeJkcV/AQcdx+VoKjwjh+8R4xYZFYrO1fqwJ6sJUyj1szUyd9PErt/ILL2D+OqwLu4QneYaimeLiFTnzKOHwTeJYDxEEbK32eDPhGOnwvcCcH2EE/olXVnpcKOo9P+IiLOcBReijdqBzsn/h2hUrVZLeodmBdx45X8Afl0EcZyvkojQAAAABJRU5ErkJggg=="/></a></li>
+                            <li><button class="botao"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASlJREFUSEvNlDEvBFEURs+JaLQS0YmaH7CVSqPQKbZRCxqV+At6ZAuVRrbQKTQKlegp1BqJRqOSuPKSXZnFzLw1RtxminvfPfeb790nLYct9+fvABERAzUvwLG68xvqPhQUAMO+y+plU8iXXxQRu8A+cK6utgGYBh6BCWBOfWgC+dbkiDgB1hs07qvddL4M0AGuGwDu1MVSQEpExC2w8EPInpp8LN+DiNgAej8AvAGz6lMdYApIRek7TlyoK8MDlZscEQfA9jjdga7azwUkD5IXufEMzKivWYCB2VfAUiahp24Wa2sfu4hI9/k0E9BRb8YFTAL3wHwN5Exd+1xTqyBz8tKyLEBEHAJbwJE6cquqcpV7UByp+JSrI0NV5cYBtKugiQ9ZHvxrwDuPRWUZ2KtgpwAAAABJRU5ErkJggg=="/>Carrinho</button></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <main>
+
+            <div class="color-decoration"></div>
+            
+            <div class="title">   
+                <h1>SUA SAÚDE A UM PEDIDO DE DISTÂNCIA</h1>
+            </div>
+            
+            <div class="sub-title">
+                <p>Se você curte saborear e ao mesmo tempo estar saudável, pode colar com nós que é sucesso!</p>
+            </div>
+            
+            <div class="container-img">
+                <img src="IMAGENS/comida-prato.jpeg" alt="comida no prato principal">
+            </div>
+
+            <section class="content">
+                
+                <div class="title-content">
+                    <h1>SABOR E SAÚDE EM SINERGIA</h1>
+                </div>
+                
+                <div class="text">
+                    <p>Aqui nós temos os ingredientes da melhor qualidade e contato direto com os fornecedores, fazendo com que a credibilidade aumente muito mais e que você tenha muito mais sabor e saúde em seu prato!</p>
+                </div>
+
+                <div class="title-content">
+                    <h1>CULINÁRIA DESCOMPLICADA, TECNOLOGIA ACONCHEGANTE</h1>
+                </div>
+
+                <div class="text">
+                    <p>No coração da nossas refeições, há uma mistura irresistível de tecnologia intuitiva com nossa IA que calcula as suas necessidades calóricas e, paixão pela culinária. Facilitamos seu pedido, sua entrega e até mesmo o momento de saborear nossas delícias - uma experiência fácil, prazerosa e cheia de amor culinário.</p>
+                </div>
+
+                <div class="title-content">
+                    <h1>VARIEDADE E SABORES QUE ENCANTAM!</h1>
+                </div>
+
+                <div class="text">
+                    <p>Na nossa loja online, oferecemos uma ampla seleção de pratos prontos congelados, prontos para transformar a sua rotina em uma experiência gastronômica única. Estamos constantemente explorando novos horizontes culinários, trazendo opções irresistíveis diretamente para o nosso site. Descubra a diversidade que só nós podemos oferecer e deixe-nos ser a escolha que enriquece o seu paladar a cada pedido.</p>
+                </div>
+
+            </section>
+
+            <div class="infos-add">
+            
+                <div class="elemento">
+                    <div>
+                        <div class="img-infos-add">
+                            <img src="IMAGENS/fast.png" alt="RÁPIDO">
+                        </div>
+                        <div>
+                            <h3 class="title-infos-add">RÁPIDO</h3>
+                        </div>
+                    </div>
+                    <div class="txt-infos-add">
+                        <p>Com o nosso sistema de entregas FAST, a sua refeição chega na sua casa rapidamente apenas com um click!</p>
+                    </div>
+                </div>
+    
+                <div class="elemento">
+                    <div>
+                        <div class="img-infos-add">
+                            <img src="IMAGENS/eficiente.png" alt="EFICIENTE">
+                        </div>
+                        <div>
+                            <h3 class="title-infos-add">EFICIENTE</h3>
+                        </div>
+                    </div>
+                    <div class="txt-infos-add">
+                        <p>Com o sistema altamente qualificado de nossa IA, você tem em dados numéricos, como está a sua saúde e sugestões de alimentação logo em seguida.</p>
+                    </div>
+                </div>
+                    
+                <div class="elemento">
+                    <div>
+                        <div class="img-infos-add">
+                            <img src="IMAGENS/inteligente.png" alt="INTELIGENTE">
+                        </div>
+                        <div>
+                            <h3 class="title-infos-add">INTELIGENTE</h3>
+                        </div>
+                    </div>
+                    <div class="txt-infos-add">
+                        <p>Com a nossa IA você pode saber exatamente o seu gasto calórico, seu IMC e ainda pode se basear na quantidade de nutrientes que deve comer por dia.</p>
+                    </div>
+                </div>
+    
+            </div>
+
+        </main>
+
+        
+        
+        <footer>
+            <div class="img-l">
+                <div class="div-footer">
+                    <a href="/"><img src="IMAGENS/logo.png" alt="LOGO"></a>
+                </div>
+                <div class="div-footer">
+                    <h2 style="margin-bottom: 10px;">Venha conhecer <br> </h2>
+                    <a href="/" class="link">SOBRE A LIFE+ <br> </a>
+                    <a href="/" class="link">NA MÍDIA <br> </a>
+                    <a href="/" class="link">PARTICIPANTES <br> </a>
+                    <a href="/" class="link">DESENVOLVEDOR <br> </a>
+                </div>
+                    
+                <div class="div-footer">
+                    <h2 style="margin-bottom: 10px;">Fale conosco <br> </h2>
+                    <a href="/" class="link">DÚVIDAS FREQUENTES <br>   </a>
+                    <a href="/" class="link">PRECISA DE AJUDA <br> </a>
+                    <a href="/" class="link">TERMOS DE USO <br> </a>
+                    <a href="/" class="link">POLÍTICA DE PRIVACIDADE <br>  </a>
+                </div>
+            </div>
+                
+            <div class="img">
+                <h5>Formas de Pagamento</h5>
+                <img src="IMAGENS/fdp.png" alt="Formas de Pagamento">
+            </div>
+        </footer>
+
+    </body>
+    </html>
