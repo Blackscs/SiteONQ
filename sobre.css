@@ -8,6 +8,13 @@
     list-style: none;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
 li {
     display: flex;
     justify-content: center;
@@ -17,10 +24,6 @@ li {
 a {
     color: black;
     font-weight: 600;
-}
-
-body {
-    width: 100vw;
 }
 
 header {
@@ -80,6 +83,11 @@ nav {
 
 .botao:hover {
     cursor: pointer;
+   
+}   
+
+button:hover {
+    background-color: rgb(229, 255, 229);
 }
 
 main {

@@ -6,7 +6,14 @@
     font-family: 'Poppins', sans-serif;
     bottom: 0;list-style: none;
     color: black;
-    }
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
 
 a {
     color: black;
@@ -76,15 +83,10 @@ nav {
 }
 .botao:hover {
     cursor: pointer;
+    background-color: rgb(0, 142, 0);
 }
 
-body {
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-    height: 100vh;
-}
-
-main{
+main {
     justify-content: center;
     padding: 0px 250px 0px 250px;
 }
@@ -333,6 +335,12 @@ a{
 
 .botao-catalogo button{
     width: 100%;
+}
+
+.title-blog {
+    font-size: 50px;
+    font-weight: 600;
+    margin: 5% 0%;
 }
 
 @media screen and (max-width: 1150px) {
